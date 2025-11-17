@@ -22,6 +22,15 @@ public class HomeController {
         model.addAttribute("steps", steps);
         return "result";
     }
+
+    @PostMapping("/addrobot")
+    public String addrobot(@RequestParam("name") String name, 
+                            @RequestParam("steps") int steps, 
+                            Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("steps", steps);
+        return "result";
+    }
     @PostMapping("/addwarehouse")
     public String addwarehouse(@RequestParam("name") String name, 
                             @RequestParam("steps") int steps, 
